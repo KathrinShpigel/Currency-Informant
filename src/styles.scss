@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~normalize.css/normalize.css';
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,*::after,*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', Arial, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  color: #20201f;
+  margin: 0;
+}
+.container {
+  max-width: 1600px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}

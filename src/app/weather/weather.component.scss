@@ -1,0 +1,41 @@
+.weather{
+  text-align: center;
+  &__city {
+    width: 300px;
+    padding: 10px 0;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  &__icon {
+    font-size: 7rem;
+    color: rgba(255, 214, 0, .95);
+    &:hover {
+      animation: shake 1.5s;
+    }
+  }
+  &__temperature {
+    font-size: 2rem;
+  }
+  &__description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: .2rem 0;
+    color:#f6f6f6;
+    text-transform: capitalize;
+  }
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+}

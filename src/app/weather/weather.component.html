@@ -1,0 +1,10 @@
+<div class="weather">
+  <div class="weather__city" contenteditable="true">Краснодар</div>
+  <div class="weather__wrapper">
+    <i class="weather__icon owf" [ngClass]="this.weather.class"></i>
+    <div class="weather__info">
+      <div class="weather__temperature">{{this.weather.temp}}</div>
+      <div class="weather__description">{{this.weather.descr}}</div>
+    </div>
+  </div>
+</div>

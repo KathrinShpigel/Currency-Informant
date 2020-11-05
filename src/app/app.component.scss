@@ -1,0 +1,71 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #444444;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+.wrapper-first-screen {
+  background-image:
+  linear-gradient(to top,  rgba(255, 214, 0, .95),  rgba(255, 214, 0, .95)),
+  url(../assets/images/currenciesBG.jpg);
+}
+.header {
+  background-color: #202020;
+  &__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #f6f6f6;
+  }
+}
+.intro {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+  &__content {
+    max-width: 44rem;
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__list {
+    margin-top: 1rem;
+  }
+  &__item {
+    list-style-type: none;
+    &:before {
+      content: "✔";
+    }
+  }
+  &__info {
+    max-width: 22rem;
+    background-color: #202020;
+    color: #f6f6f6;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+.info {
+  &__time {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  &__weather {
+    margin-top: 2.5rem;
+  }
+}
