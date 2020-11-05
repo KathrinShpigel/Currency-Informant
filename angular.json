@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "currency-informant"
+    }
+  },
+  "defaultProject": "currency-informant",
+  "cli": {
+    "analytics": false
+  }
 }
