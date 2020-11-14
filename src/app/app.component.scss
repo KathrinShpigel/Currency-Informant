@@ -8,20 +8,25 @@
   cursor: pointer;
 }
 .wrapper-first-screen {
+  position: relative;
   background-image:
   linear-gradient(to top,  rgba(255, 214, 0, .95),  rgba(255, 214, 0, .95)),
   url(../assets/images/currenciesBG.jpg);
 }
 .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background-color: #202020;
   &__title {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: #f6f6f6;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #f6f6f6;
   }
 }
 .intro {
@@ -67,5 +72,25 @@
   }
   &__weather {
     margin-top: 2.5rem;
+  }
+}
+.footer {
+  background-color: #202020;
+  &__link {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    padding-top: 1rem;
+    padding-bottom: .8rem;
+    color: #f6f6f6;
+    text-decoration: none;
+  }
+  &__autor {
+    font-size: .9rem;
+    font-weight: 300;
+    padding-top: .2rem;
+    padding-bottom: 1rem;
+    color: #f6f6f6;
   }
 }
