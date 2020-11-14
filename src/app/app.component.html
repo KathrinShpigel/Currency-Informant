@@ -14,8 +14,8 @@
       </ul>
     </div>
     <div class="intro__info">
-      <div class="info__date">{{ci.dateNowISO | date: 'dd MMMM yyyy'}}</div>
-      <div class="info__time">{{ci.dateNowMilliseconds | date: 'HH:mm:ss'}}</div>
+      <div class="info__date">{{ci?.dateNowISO | date: 'dd MMMM yyyy'}}</div>
+      <div class="info__time">{{ci?.dateNowMilliseconds | date: 'HH:mm:ss'}}</div>
       <div class="info__weather">
         <app-weather></app-weather>
       </div>
@@ -23,7 +23,7 @@
   </div>
   <footer class="footer">
     <div class="container">
-      <a class="footer__link" href="https://github.com/KathrinShpigel/Currency-Informant">Исходный код проекта</a>
+      <a class="footer__link" href="https://github.com/KathrinShpigel/Currency-Informant" target="_blank">Исходный код проекта</a>
       <div class="footer__autor">Автор проекта: Шпигель Екатерина</div>
     </div>
   </footer>
