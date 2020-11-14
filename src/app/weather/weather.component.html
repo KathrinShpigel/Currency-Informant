@@ -1,5 +1,10 @@
 <div class="weather">
-  <div class="weather__city" contenteditable="true">Краснодар</div>
+  <div class="weather__city" contenteditable="true"
+    [(ngModel)]="city"
+    (click)="clearCity($event)"
+    (keypress)="setCity($event)"
+    (blur)="setCity($event)"
+    (change)="setCity($event)">{{city}}</div>
   <div class="weather__wrapper">
     <i class="weather__icon owf" [ngClass]="this.weather.class"></i>
     <div class="weather__info">
