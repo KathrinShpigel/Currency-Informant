@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 2020-11-15
+### Added
+- News feed.
+
 ## [0.0.1] - 2020-11-14
 ### Added
 - Information about the current time in Moscow.
@@ -15,3 +19,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/KathrinShpigel/Currency-Informant/tree/dev
 [0.0.1]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev
+[0.0.2]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev

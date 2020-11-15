@@ -1,5 +1,5 @@
 # Валютный информатор
-### Version: [0.0.1](https://github.com/KathrinShpigel/Currency-Informant) - 2020-11-14
+### Version: [0.0.2](https://github.com/KathrinShpigel/Currency-Informant) - 2020-11-15
 
 Deploy: __[currency-informant.netlify.app](https://app-currency-informant.netlify.app)__
 
