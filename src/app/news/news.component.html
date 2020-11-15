@@ -1,0 +1,7 @@
+<marquee class="news__track" scrolldelay="30">
+  <ng-container *ngFor="let newsItem of news">
+    <a href="{{newsItem.link}}" class="news__title">
+      {{newsItem.title}}
+    </a>
+  </ng-container>
+</marquee>

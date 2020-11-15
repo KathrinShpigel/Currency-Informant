@@ -74,6 +74,11 @@
     margin-top: 2.5rem;
   }
 }
+.news {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
 .footer {
   background-color: #202020;
   &__link {

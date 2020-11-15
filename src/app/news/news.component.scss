@@ -1,0 +1,17 @@
+.news {
+  &__track {
+    padding: .7rem;
+    background-color: #202020;
+  }
+  &__title {
+    color: rgba(255, 214, 0, .95);
+    font-size: 1rem;
+    font-weight: bolder;
+    line-height: 114%;
+    text-shadow: #000000 0px 1px 1px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 15rem;
+    letter-spacing: .05rem;
+  }
+}
