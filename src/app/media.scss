@@ -1,0 +1,50 @@
+@media (max-width: 1120px) {
+  .intro {
+    padding: 1rem;
+    &__item {
+      padding: .5rem;
+    }
+  }
+}
+@media (max-width: 755px) {
+  .intro {
+    flex-direction: column;
+    &__info {
+      order: -1;
+    }
+    &__content {
+      margin-top: 2rem;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    position: relative;
+    &__title {
+      font-size: 1.6rem;
+      letter-spacing: 0.1rem;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      margin-bottom: 0;
+    }
+  }
+  .intro {
+    padding-top: 0;
+    &__info {
+      padding: .5rem;
+    }
+  }
+  .info {
+    &__time {
+      margin-top: .8rem;
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+    &__date {
+      font-size: 1.7rem;
+    }
+    &__weather {
+      margin-top: 2rem;
+    }
+  }
+}
