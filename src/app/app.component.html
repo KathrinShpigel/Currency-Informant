@@ -14,7 +14,7 @@
       </ul>
     </div>
     <div class="intro__info">
-      <div class="info__date">{{ci?.dateNowISO | date: 'dd MMMM yyyy'}}</div>
+      <div class="info__date">{{ci?.dateNowISO.split(' ')[0] | titlecase}} {{ci?.dateNowISO.split(' ').slice(1).join(' ')}}</div>
       <div class="info__time">{{ci?.dateNowMilliseconds | date: 'HH:mm:ss'}}</div>
       <div class="info__weather">
         <app-weather></app-weather>
