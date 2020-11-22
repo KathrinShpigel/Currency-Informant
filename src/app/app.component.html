@@ -24,21 +24,22 @@
   <div class="news">
     <app-news></app-news>
   </div>
-</div>
-<aside class="recent-courses">
-  <ng-container *ngFor="let cur of ci.currencies">
-    <div class="recent-courses__content">
-      <span class="material-icons recent-courses__icon" *ngIf="cur.today < cur.yesterday; else anotherIcon">trending_down</span>
-      <ng-template #anotherIcon><span class="material-icons recent-courses__icon">trending_up</span></ng-template>
-      <div class="recent-courses__title">{{cur.curName}}</div>
-      <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.today}}</span> BYN</div>
-      <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterday}}</span> BYN</div>
+  <aside class="recent-courses">
+    <ng-container *ngFor="let cur of ci.currencies">
+      <div class="recent-courses__content">
+        <span class="material-icons recent-courses__icon" *ngIf="cur.today < cur.yesterday; else anotherIcon">trending_down</span>
+        <ng-template #anotherIcon><span class="material-icons recent-courses__icon">trending_up</span></ng-template>
+        <div class="recent-courses__title">{{cur.curName}}</div>
+        <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.today}}</span> BYN</div>
+        <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterday}}</span> BYN</div>
+      </div>
+    </ng-container>
+  </aside>
+  <footer class="footer">
+    <div class="container">
+      <a class="footer__link" href="https://github.com/KathrinShpigel/Currency-Informant" target="_blank">Исходный код проекта</a>
+      <div class="footer__autor">Автор проекта: Шпигель Екатерина</div>
     </div>
-  </ng-container>
-</aside>
-<footer class="footer">
-  <div class="container">
-    <a class="footer__link" href="https://github.com/KathrinShpigel/Currency-Informant" target="_blank">Исходный код проекта</a>
-    <div class="footer__autor">Автор проекта: Шпигель Екатерина</div>
-  </div>
-</footer>
+  </footer>
+</div>
+
