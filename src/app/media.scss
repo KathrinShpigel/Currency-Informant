@@ -16,6 +16,60 @@
       margin-top: 2rem;
     }
   }
+  .recent-courses {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4rem .3rem;
+    &__title {
+      font-size: .9rem;
+      padding: .3rem .5rem;
+      border-radius: 4px;
+    }
+    &__content {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around;
+      padding: .5rem .5rem .5rem 3rem;
+      font-size: .85rem;
+      line-height: .85rem;
+    }
+    &__today {
+      margin-top: 0rem;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .recent-courses {
+    align-items: center;
+    &__content {
+      min-width: 12rem;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-around;
+      padding: .5rem .5rem .5rem 3rem;
+      font-size: .85rem;
+      line-height: .85rem;
+    }
+    &__today {
+      margin-top: .6rem;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+    }
+  }
 }
 @media (max-width: 375px) {
   .header {

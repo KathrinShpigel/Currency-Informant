@@ -7,6 +7,28 @@ export class CurrencyInformantService {
   dateNow: Date;
   dateNowISO: any;
   dateNowMilliseconds: any;
+  dateYesterday: Date = new Date(new Date().setDate(new Date().getDate() - 1));
+
+  currencies = [
+    {
+      curName: 'EUR',
+      curID: 170,
+      today: 1.55,
+      yesterday: 1.45,
+    },
+    {
+      curName: 'USD',
+      curID: 190,
+      today: 1.05,
+      yesterday: 1.10,
+    },
+    {
+      curName: 'UAH',
+      curID: 180,
+      today: 0.35,
+      yesterday: 0.35,
+    },
+  ];
 
   constructor() { }
 

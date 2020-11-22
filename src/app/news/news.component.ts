@@ -22,12 +22,15 @@ export class NewsComponent implements OnInit {
     this.getData();
   }
 
-  getData(): void {
+  getData(n = 0): void {
     this.http
-      .get(`http://newsapi.org/v2/everything?q=bitcoin&from=${this.now[0]}-${this.now[1]}-${this.now[2]}&sortBy=publishedAt&apiKey=1eb3d5e7996b4e47be7d4a1b51c69587`)
+      .get(`http://newsapi.org/v2/everything?q=bitcoin&from=${this.now[0]}-${this.now[1]}-${this.now[2] - n}&sortBy=publishedAt&apiKey=1eb3d5e7996b4e47be7d4a1b51c69587`)
       .subscribe(
         (data: any) => this.news = this.getNews(data),
         (error: any) => {
+          n++;
+          console.log(this.now[2] - n);
+          this.getData(n);
           console.error(error);
         }
       );
