@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as dayjs from 'dayjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -31,8 +32,8 @@ export class CurrencyInformantService {
 
   getCurrencies(): any {
     return Promise.all([
-      fetch(`${this.url}2020-11-22&periodicity=0`).then(response => response.json()),
-      fetch(`${this.url}2020-11-23&periodicity=0`).then(response => response.json()),
+        fetch(`${this.url}${dayjs().format('YYYY-MM-DD')}&periodicity=0`).then(response => response.json()),
+        fetch(`${this.url}${dayjs(this.dateYesterday).format('YYYY-MM-DD')}&periodicity=0`).then(response => response.json()),
       ])
       .then(data => {
         const result = [];
@@ -43,10 +44,12 @@ export class CurrencyInformantService {
                 Cur_ID: el.Cur_ID,
                 Cur_Abbreviation: el.Cur_Abbreviation,
                 curName: el.Cur_Name,
-                todayCurRate: el.Cur_OfficialRate,
-                yesterdayCurRate: element.Cur_OfficialRate,
+                todayCurRate: 0,
+                yesterdayCurRate: 0,
                 Cur_Scale: el.Cur_Scale,
               };
+              item.todayCurRate = el.Date - element.Date > 0 ? el.Cur_OfficialRate : element.Cur_OfficialRate;
+              item.yesterdayCurRate = el.Date - element.Date < 0 ? el.Cur_OfficialRate : element.Cur_OfficialRate;
               result.push(item);
               if (el.Cur_Abbreviation === 'EUR' ||
                 el.Cur_Abbreviation === 'USD' ||
@@ -57,7 +60,6 @@ export class CurrencyInformantService {
           });
         });
 
-        console.log(data);
       });
 }
 }
