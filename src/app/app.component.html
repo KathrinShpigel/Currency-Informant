@@ -25,13 +25,14 @@
     <app-news></app-news>
   </div>
   <aside class="recent-courses">
-    <ng-container *ngFor="let cur of ci.currencies">
+    <ng-container *ngFor="let cur of ci?.infoCur">
       <div class="recent-courses__content">
-        <span class="material-icons recent-courses__icon" *ngIf="cur.today < cur.yesterday; else anotherIcon">trending_down</span>
+        <span class="material-icons recent-courses__icon"
+          *ngIf="cur.todayCurRate < cur.yesterdayCurRate; else anotherIcon">trending_down</span>
         <ng-template #anotherIcon><span class="material-icons recent-courses__icon">trending_up</span></ng-template>
         <div class="recent-courses__title">{{cur.curName}}</div>
-        <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.today}}</span> BYN</div>
-        <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterday}}</span> BYN</div>
+        <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.todayCurRate}}</span> BYN</div>
+        <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterdayCurRate}}</span> BYN</div>
       </div>
     </ng-container>
   </aside>

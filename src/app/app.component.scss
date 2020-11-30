@@ -84,7 +84,7 @@
 .recent-courses {
   display: flex;
   justify-content: space-around;
-  padding: 3rem;
+  padding: 8rem 3rem;
   background:
     #ffffff
     url(../assets/images/currenciesLast2daysBG.jpg)
@@ -110,6 +110,7 @@
     background-color: #FFEB3B;
     padding: 1.5rem;
     border-radius: 4px;
+    min-width: 250px;
     &:nth-child(2) {
       color: #f6f6f6;
       background-color: #202020;
@@ -128,7 +129,7 @@
   &__icon {
     position: absolute;
     top: 15%;
-    right: 20%;
+    right: 20px;
     font-size: 2.5rem;
   }
 }
