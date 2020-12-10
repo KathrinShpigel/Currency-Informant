@@ -5,6 +5,13 @@
       padding: .5rem;
     }
   }
+  .menu {
+    &__list {
+      padding: .7rem 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
 }
 @media (max-width: 755px) {
   .intro {
@@ -43,6 +50,14 @@
       left: 5px;
       transform: translateY(-50%);
       font-size: 2.5rem;
+    }
+  }
+  .menu {
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      padding: .9rem 0.5rem;
     }
   }
 }

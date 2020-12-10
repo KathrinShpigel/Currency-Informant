@@ -1,0 +1,26 @@
+.table-container {
+  padding: 1.5rem;
+  background: url(../../assets/images/currenciesTableBG.jpg);
+}
+.table {
+  margin: 0 auto;
+  background-color: #202020;
+  padding: .5rem;
+  border-radius: 4px;
+  th {
+    padding: .4rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    .mat-sort-header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  td {
+    padding: .4rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+}

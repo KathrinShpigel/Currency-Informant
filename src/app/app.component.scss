@@ -68,7 +68,7 @@
   }
   &__date {
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   &__weather {
     margin-top: 2.5rem;
@@ -76,10 +76,8 @@
   }
 }
 .news {
-  position: sticky;
-  top: 50px;
-  z-index: 1;
-  cursor: pointer;
+  position: relative;
+  top: 3px;
 }
 .recent-courses {
   display: flex;
@@ -132,6 +130,31 @@
     right: 20px;
     font-size: 2.5rem;
     overflow: hidden;
+  }
+}
+.nav {
+  background-color: #202020;
+}
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 1.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  &__item {
+    cursor: pointer;
+    padding: 0 .5rem;
+    a {
+      text-decoration: none;
+      color: #f6f6f6;
+      &:hover {
+        color: #FFEB3B;
+      }
+    }
   }
 }
 .footer {

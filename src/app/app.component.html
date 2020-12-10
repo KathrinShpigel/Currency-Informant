@@ -21,9 +21,16 @@
       </div>
     </div>
   </div>
-  <div class="news">
-    <app-news></app-news>
-  </div>
+  <nav class="nav">
+    <div class="container">
+      <ul class="menu__list">
+        <li class="menu__item"><a routerLink="/chart">Информация о валюте за период</a></li>
+        <li class="menu__item"><a routerLink="/converter">Конвертер валют</a></li>
+        <li class="menu__item"><a routerLink="/table">Курсы валют на {{ci?.dateNow | date: 'dd.MM.yyyy'}}</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
   <aside class="recent-courses">
     <ng-container *ngFor="let cur of ci?.infoCur">
       <div class="recent-courses__content">
@@ -36,6 +43,9 @@
       </div>
     </ng-container>
   </aside>
+  <div class="news">
+    <app-news></app-news>
+  </div>
   <footer class="footer">
     <div class="container">
       <a class="footer__link" href="https://github.com/KathrinShpigel/Currency-Informant" target="_blank">Исходный код проекта</a>
