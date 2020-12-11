@@ -6,10 +6,14 @@
     (blur)="setCity($event)"
     (change)="setCity($event)">{{city}}</div>
   <div class="weather__wrapper">
-    <i class="weather__icon owf" [ngClass]="this.weather.class"></i>
-    <div class="weather__info">
-      <div class="weather__temperature">{{this.weather?.temp}}</div>
-      <div class="weather__description">{{this.weather?.descr}}</div>
-    </div>
+    <mat-spinner class="mat-spinner-color"
+      *ngIf="loading; else contentWeatherInfo"></mat-spinner>
+    <ng-template #contentWeatherInfo>
+      <i class="weather__icon owf" [ngClass]="this.weather.class"></i>
+      <div class="weather__info">
+        <div class="weather__temperature">{{this.weather?.temp}}</div>
+        <div class="weather__description">{{this.weather?.descr}}</div>
+      </div>
+    </ng-template>
   </div>
 </div>
