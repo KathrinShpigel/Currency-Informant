@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2020-12-12
+### Added
+- Section with table with information about all currencies for the last two days.
+### Fixed
+- Parsing data from server.
+
 ## [0.0.3] - 2020-11-30
 ### Added
 - Section with information about currencies for the last two days.
@@ -25,3 +31,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.0.1]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev
 [0.0.2]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev
 [0.0.3]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev
+[0.0.4]: https://github.com/KathrinShpigel/Currency-Informant/commits/dev
