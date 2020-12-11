@@ -41,6 +41,7 @@ export class WeatherComponent implements OnInit {
           e.target.textContent = this.city = 'Краснодар';
           localStorage.removeItem('city2$');
           this.setCity('err');
+          this.loading = false;
         }
       );
   }
@@ -51,16 +52,19 @@ export class WeatherComponent implements OnInit {
       if (e.which === 13 || e.keyCode === 13) {
         if (e.target.textContent === '') {
           e.target.textContent = this.city = localStorage.getItem('city2$') || 'Краснодар';
+          this.loading = false;
           return;
         }
         localStorage.setItem('city2$', e.target.textContent);
         this.city = e.target.textContent;
+        this.loading = false;
       }
     } else if (e === 'err') {
       this.getData();
     } else {
       if (e.target.textContent === '') {
         e.target.textContent = this.city = localStorage.getItem('city2$') || 'Краснодар';
+        this.loading = false;
         return;
       }
       localStorage.setItem('city2$', e.target.textContent);
