@@ -24,9 +24,9 @@
   <nav class="nav">
     <div class="container">
       <ul class="menu__list">
-        <li class="menu__item"><a routerLink="/chart">Информация о валюте за период</a></li>
-        <li class="menu__item"><a routerLink="/converter">Конвертер валют</a></li>
-        <li class="menu__item"><a routerLink="/table">Курсы валют на {{ci?.dateNow | date: 'dd.MM.yyyy'}}</a></li>
+        <li class="menu__item" routerLinkActive="menu__item_active"><a routerLink="/chart">Информация о валюте за период</a></li>
+        <li class="menu__item" routerLinkActive="menu__item_active"><a routerLink="/converter">Конвертер валют</a></li>
+        <li class="menu__item" routerLinkActive="menu__item_active"><a routerLink="/table">Курсы валют на {{ci?.dateNow | date: 'dd.MM.yyyy'}}</a></li>
       </ul>
     </div>
   </nav>
@@ -38,8 +38,8 @@
           *ngIf="cur.todayCurRate < cur.yesterdayCurRate; else anotherIcon">trending_down</span>
         <ng-template #anotherIcon><span class="material-icons recent-courses__icon">trending_up</span></ng-template>
         <div class="recent-courses__title">{{cur.curName}}</div>
-        <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.todayCurRate}}</span> BYN</div>
-        <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterdayCurRate}}</span> BYN</div>
+        <div class="recent-courses__today" title={{ci?.dateNow}}>Сегодня: <span>{{cur.todayCurRate | number:'1.4-4'}}</span> BYN</div>
+        <div class="recent-courses__yesterday" title={{ci?.dateYesterday}}>Вчера: <span>{{cur.yesterdayCurRate | number:'1.4-4'}}</span> BYN</div>
       </div>
     </ng-container>
   </aside>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
 
 import { ChartComponent } from './chart/chart.component';
 import { ConverterComponent } from './converter/converter.component';

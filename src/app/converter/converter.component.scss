@@ -1,0 +1,15 @@
+.converter-wrapper {
+  background: #ffffff url(../../assets/images/currenciesTableBG.jpg);
+}
+.container {
+  position: relative;
+  min-height: 30rem;
+  background: url(../../assets/images/sectionDevBg.png) center no-repeat;
+  background-size: 50% auto;
+  p {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 1.4rem;
+  }
+}
