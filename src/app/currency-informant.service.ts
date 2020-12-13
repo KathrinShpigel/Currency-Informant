@@ -12,7 +12,8 @@ export class CurrencyInformantService {
   url = 'https://www.nbrb.by/api/exrates/rates?ondate=';
 
   infoCur = [];
-  currenciesList = [];
+  currenciesListLast2Days = [];
+  currencysNamesList = [];
   loading = false;
 
   constructor() { }
@@ -61,7 +62,7 @@ export class CurrencyInformantService {
               }
               item.change = Math.round(item.todayCurRate*10000 - item.yesterdayCurRate*10000)/10000;
 
-              this.currenciesList.push(item);
+              this.currenciesListLast2Days.push(item);
 
               if (el.Cur_Abbreviation === 'EUR' ||
                 el.Cur_Abbreviation === 'USD' ||
@@ -72,10 +73,12 @@ export class CurrencyInformantService {
           });
         });
         this.loading = false;
+        console.log(this.currenciesListLast2Days);
       })
       .catch(err => {
         this.loading = false;
         console.error(err);
       });
-}
+  }
+
 }

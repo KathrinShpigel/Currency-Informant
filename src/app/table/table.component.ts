@@ -1,7 +1,8 @@
 import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
-import { CurrencyInformantService } from '../currency-informant.service';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+
+import { CurrencyInformantService } from '../currency-informant.service';
 
 @Component({
   selector: 'app-table',
@@ -23,7 +24,6 @@ export class TableComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    console.log(this.ci.currenciesList);
   }
 
   ngAfterViewInit() {

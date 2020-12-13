@@ -1,5 +1,31 @@
 <div class="converter-wrapper">
   <div class="container">
-    <p>Раздел находится в разработке</p>
+    <div class="form">
+      <mat-form-field class="form__input">
+        <mat-label>BYN</mat-label>
+        <input type="number" [(ngModel)]="countByn" matInput placeholder="1" [value]="countByn"
+          (change)="onCountBynChange()">
+      </mat-form-field>
+
+      <mat-form-field class="form__input">
+        <mat-label *ngIf="!currentCurrency; else labelCur">Конвертировать в</mat-label>
+        <ng-template #labelCur>
+          <mat-label>{{currentCurrency?.curName}}</mat-label>
+        </ng-template>
+        <input type="number" [(ngModel)]="countCur" matInput placeholder="1" [value]="countCur"
+          (change)="onCountCurChange()">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form__select">
+        <mat-label *ngIf="!currentCurrency; else labelSelect">Выберите валюту</mat-label>
+        <ng-template #labelSelect>
+          <mat-label>Валюта</mat-label>
+        </ng-template>
+        <mat-select (selectionChange)=changeRatio($event)>
+          <mat-option *ngFor="let currency of ci?.currenciesListLast2Days" [value]="currency">{{currency.curName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
   </div>
 </div>

@@ -1,15 +1,46 @@
 .converter-wrapper {
-  background: #ffffff url(../../assets/images/currenciesTableBG.jpg);
+  padding: 5rem 0;
 }
 .container {
-  position: relative;
-  min-height: 30rem;
-  background: url(../../assets/images/sectionDevBg.png) center no-repeat;
-  background-size: 50% auto;
-  p {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    font-size: 1.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(../../assets/images/converterBG.png) center right no-repeat;
+  background-size: contain;
+  min-height: 20rem;
+  padding: 5rem 1rem;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #202020;
+  color: #FFEB3B;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  & .mat-form-field-label {
+    color: #f6f6f6;
+  }
+  & .mat-select-value {
+    color: #FFEB3B;
+    font-weight: 700;
+  }
+  & .mat-select-arrow {
+    color: #f6f6f6;
   }
 }
