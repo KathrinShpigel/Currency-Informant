@@ -3,7 +3,7 @@
     <mat-spinner class="mat-spinner-color"
       *ngIf="ci.loading; else table"></mat-spinner>
     <ng-template #table>
-      <table mat-table [dataSource]="ci?.currenciesListLast2Days" matSort class="mat-elevation-z8 table">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 table">
 
         <!-- Cur_Abbreviation Column -->
         <ng-container matColumnDef="Cur_Abbreviation">
