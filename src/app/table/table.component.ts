@@ -28,7 +28,6 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   dataSource;
 
-  //@ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
 
   constructor(ci: CurrencyInformantService) {
@@ -36,23 +35,18 @@ export class TableComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-
-
   }
 
   ngAfterViewInit() {
-    if (!this.ci.loading) {
-      this.ci.currenciesListLast2Days.forEach(el => {
-        ELEMENT_DATA.push(el)
-      });
-      this.dataSource = new MatTableDataSource(ELEMENT_DATA);
-      this.dataSource.sort = this.sort;
-      const sortState: Sort = {active: 'name', direction: 'desc'};
-      this.sort.active = sortState.active;
-      this.sort.direction = sortState.direction;
-      this.sort.sortChange.emit(sortState);
-      console.log(this.sort);
-    }
+    this.ci.currenciesListLast2Days.forEach(el => {
+      ELEMENT_DATA.push(el)
+    });
+    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+    this.dataSource.sort = this.sort;
+    const sortState: Sort = {active: 'name', direction: 'desc'};
+    this.sort.active = sortState.active;
+    this.sort.direction = sortState.direction;
+    this.sort.sortChange.emit(sortState);
   }
 
 }

@@ -73,7 +73,6 @@ export class CurrencyInformantService {
           });
         });
         this.loading = false;
-        console.log(this.currenciesListLast2Days);
       })
       .catch(err => {
         this.loading = false;
